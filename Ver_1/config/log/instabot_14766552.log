@@ -1,0 +1,30 @@
+2021-01-01 10:36:46,403 - instabot version: 0.117.0 (bot) - INFO - Instabot version: 0.117.0 Started
+2021-01-01 10:36:46,403 - instabot version: 0.117.0 (bot) - DEBUG - Bot imported from C:\Users\LENOVO\AppData\Local\Programs\Python\Python38-32\lib\site-packages\instabot\bot\bot.py
+2021-01-01 10:36:46,433 - instabot version: 0.117.0 (api_login) - DEBUG - Loading cookies
+2021-01-01 10:36:46,433 - instabot version: 0.117.0 (api_login) - DEBUG - Loading uuids
+2021-01-01 10:36:46,433 - instabot version: 0.117.0 (api_login) - INFO - Recovery from D:\Programming Languages\03. Projects\Instagram Scrapper/config/randompy2020_uuid_and_cookie.json: COOKIE True - UUIDs True - TIMING, DEVICE and ...
+- user-agent=Instagram 117.0.0.28.123 Android (28/9.0; 420dpi; 1080x1920; OnePlus; ONEPLUS A3003; OnePlus3; qcom; en_US; 180322800)
+- phone_id=6ec1115f-b830-409a-9e3a-b5fea365b8a0
+- uuid=22aee7b9-9b18-47c6-8ed3-a5513d63899c
+- client_session_id=4dcf77d1-5453-41b7-87ea-5591c086299c
+- device_id=android-e00652d37fc01327
+2021-01-01 10:36:46,434 - instabot version: 0.117.0 (api_login) - INFO - LOGIN FLOW! Just logged-in: False
+2021-01-01 10:36:50,854 - instabot version: 0.117.0 (api) - DEBUG - POST to endpoint: feed/timeline/ returned response: <Response [200]>
+2021-01-01 10:36:51,566 - instabot version: 0.117.0 (api) - DEBUG - POST to endpoint: feed/reels_tray/ returned response: <Response [200]>
+2021-01-01 10:36:52,008 - instabot version: 0.117.0 (api) - DEBUG - POST to endpoint: direct_v2/ranked_recipients/ returned response: <Response [200]>
+2021-01-01 10:36:52,410 - instabot version: 0.117.0 (api) - DEBUG - POST to endpoint: direct_v2/ranked_recipients/ returned response: <Response [200]>
+2021-01-01 10:36:52,843 - instabot version: 0.117.0 (api) - DEBUG - POST to endpoint: direct_v2/inbox/ returned response: <Response [200]>
+2021-01-01 10:36:53,225 - instabot version: 0.117.0 (api) - DEBUG - GET to endpoint: direct_v2/get_presence/ returned response: <Response [200]>
+2021-01-01 10:36:53,894 - instabot version: 0.117.0 (api) - DEBUG - GET to endpoint: news/inbox/?limited_activity=true&show_su=true returned response: <Response [200]>
+2021-01-01 10:36:54,297 - instabot version: 0.117.0 (api) - DEBUG - GET to endpoint: users/profile_notice/ returned response: <Response [200]>
+2021-01-01 10:36:55,676 - instabot version: 0.117.0 (api) - DEBUG - POST to endpoint: discover/explore/ returned response: <Response [200]>
+2021-01-01 10:36:55,772 - instabot version: 0.117.0 (api) - INFO - Logged-in successfully as 'randompy2020'!
+2021-01-01 10:36:55,772 - instabot version: 0.117.0 (bot_checkpoint) - DEBUG - Loading Checkpoint file from: D:\Programming Languages\03. Projects\Instagram Scrapper/config/randompy2020.checkpoint
+2021-01-01 10:36:59,687 - instabot version: 0.117.0 (api) - DEBUG - GET to endpoint: users/22838488285/info/ returned response: <Response [429]>
+2021-01-01 10:36:59,687 - instabot version: 0.117.0 (api) - DEBUG - Responsecode indicates error; response content: b'{"message": "Please wait a few minutes before you try again.", "status": "fail"}'
+2021-01-01 10:36:59,687 - instabot version: 0.117.0 (api) - ERROR - Request returns 429 error!
+2021-01-01 10:36:59,688 - instabot version: 0.117.0 (api) - WARNING - That means 'too many requests'. I'll go to sleep for 5 minutes.
+2021-01-01 10:42:00,099 - instabot version: 0.117.0 (api) - DEBUG - GET to endpoint: users/22838488285/info/ returned response: <Response [429]>
+2021-01-01 10:42:00,099 - instabot version: 0.117.0 (api) - DEBUG - Responsecode indicates error; response content: b'{"message": "Please wait a few minutes before you try again.", "status": "fail"}'
+2021-01-01 10:42:00,099 - instabot version: 0.117.0 (api) - ERROR - Request returns 429 error!
+2021-01-01 10:42:00,099 - instabot version: 0.117.0 (api) - WARNING - That means 'too many requests'. I'll go to sleep for 10 minutes.

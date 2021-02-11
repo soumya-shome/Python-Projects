@@ -1,0 +1,18 @@
+2021-01-01 10:55:23,111 - instabot version: 0.117.0 (bot) - INFO - Instabot version: 0.117.0 Started
+2021-01-01 10:55:23,112 - instabot version: 0.117.0 (bot) - DEBUG - Bot imported from C:\Users\LENOVO\AppData\Local\Programs\Python\Python38-32\lib\site-packages\instabot\bot\bot.py
+2021-01-01 10:55:23,112 - instabot version: 0.117.0 (api_login) - DEBUG - Loading cookies
+2021-01-01 10:55:23,112 - instabot version: 0.117.0 (api_login) - DEBUG - Loading uuids
+2021-01-01 10:55:23,113 - instabot version: 0.117.0 (api_login) - INFO - Recovery from D:\Programming Languages\03. Projects\Instagram Scrapper/config/calcutta_blog_uuid_and_cookie.json: COOKIE True - UUIDs True - TIMING, DEVICE and ...
+- user-agent=Instagram 117.0.0.28.123 Android (28/9.0; 420dpi; 1080x1920; OnePlus; ONEPLUS A3003; OnePlus3; qcom; en_US; 180322800)
+- phone_id=97412465-4f7d-40dd-97b6-7623e1949caa
+- uuid=0d12e5b1-04bc-48d3-b83a-812e9a723745
+- client_session_id=6c53e49f-8ae3-413a-b493-db9868e90e1b
+- device_id=android-f9547b82c549e8b9
+2021-01-01 10:55:23,130 - instabot version: 0.117.0 (api_login) - INFO - LOGIN FLOW! Just logged-in: False
+2021-01-01 10:55:26,086 - instabot version: 0.117.0 (api) - DEBUG - POST to endpoint: feed/timeline/ returned response: <Response [200]>
+2021-01-01 10:55:27,935 - instabot version: 0.117.0 (api) - DEBUG - POST to endpoint: feed/reels_tray/ returned response: <Response [200]>
+2021-01-01 10:55:27,940 - instabot version: 0.117.0 (api) - INFO - Logged-in successfully as 'calcutta_blog'!
+2021-01-01 10:55:27,940 - instabot version: 0.117.0 (bot_checkpoint) - DEBUG - Loading Checkpoint file from: D:\Programming Languages\03. Projects\Instagram Scrapper/config/calcutta_blog.checkpoint
+2021-01-01 10:55:31,733 - instabot version: 0.117.0 (api) - DEBUG - GET to endpoint: users/22838488285/info/ returned response: <Response [200]>
+2021-01-01 10:55:31,736 - instabot version: 0.117.0 (bot_checkpoint) - DEBUG - Saving Checkpoint file to: D:\Programming Languages\03. Projects\Instagram Scrapper/config/calcutta_blog.checkpoint
+2021-01-01 10:55:31,869 - instabot version: 0.117.0 (bot) - INFO - Total requests: 44

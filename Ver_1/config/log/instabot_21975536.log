@@ -1,0 +1,42 @@
+2020-12-30 11:15:28,425 - instabot version: 0.117.0 (bot) - INFO - Instabot version: 0.117.0 Started
+2020-12-30 11:15:28,425 - instabot version: 0.117.0 (bot) - DEBUG - Bot imported from C:\Users\LENOVO\AppData\Local\Programs\Python\Python38-32\lib\site-packages\instabot\bot\bot.py
+2020-12-30 11:15:28,426 - instabot version: 0.117.0 (api_login) - DEBUG - Loading cookies
+2020-12-30 11:15:28,426 - instabot version: 0.117.0 (api_login) - DEBUG - Loading uuids
+2020-12-30 11:15:28,427 - instabot version: 0.117.0 (api_login) - INFO - Recovery from D:\Programming Languages\03. Projects\Instagram Scrapper/config/randompy2020_uuid_and_cookie.json: COOKIE True - UUIDs True - TIMING, DEVICE and ...
+- user-agent=Instagram 117.0.0.28.123 Android (28/9.0; 420dpi; 1080x1920; OnePlus; ONEPLUS A3003; OnePlus3; qcom; en_US; 180322800)
+- phone_id=6ec1115f-b830-409a-9e3a-b5fea365b8a0
+- uuid=22aee7b9-9b18-47c6-8ed3-a5513d63899c
+- client_session_id=c36d92c7-2b30-49c7-9156-2a3d2416fd9b
+- device_id=android-e00652d37fc01327
+2020-12-30 11:15:28,428 - instabot version: 0.117.0 (api_login) - INFO - LOGIN FLOW! Just logged-in: False
+2020-12-30 11:15:29,783 - instabot version: 0.117.0 (api) - DEBUG - POST to endpoint: feed/timeline/ returned response: <Response [200]>
+2020-12-30 11:15:30,835 - instabot version: 0.117.0 (api) - DEBUG - POST to endpoint: feed/reels_tray/ returned response: <Response [200]>
+2020-12-30 11:15:31,365 - instabot version: 0.117.0 (api) - DEBUG - POST to endpoint: direct_v2/ranked_recipients/ returned response: <Response [200]>
+2020-12-30 11:15:31,928 - instabot version: 0.117.0 (api) - DEBUG - POST to endpoint: direct_v2/ranked_recipients/ returned response: <Response [200]>
+2020-12-30 11:15:32,504 - instabot version: 0.117.0 (api) - DEBUG - POST to endpoint: direct_v2/inbox/ returned response: <Response [200]>
+2020-12-30 11:15:33,012 - instabot version: 0.117.0 (api) - DEBUG - GET to endpoint: direct_v2/get_presence/ returned response: <Response [200]>
+2020-12-30 11:15:34,172 - instabot version: 0.117.0 (api) - DEBUG - GET to endpoint: news/inbox/?limited_activity=true&show_su=true returned response: <Response [200]>
+2020-12-30 11:15:34,689 - instabot version: 0.117.0 (api) - DEBUG - GET to endpoint: users/profile_notice/ returned response: <Response [200]>
+2020-12-30 11:15:35,454 - instabot version: 0.117.0 (api) - DEBUG - POST to endpoint: discover/explore/ returned response: <Response [200]>
+2020-12-30 11:15:35,454 - instabot version: 0.117.0 (api) - INFO - Logged-in successfully as 'randompy2020'!
+2020-12-30 11:15:35,454 - instabot version: 0.117.0 (bot_checkpoint) - DEBUG - Loading Checkpoint file from: D:\Programming Languages\03. Projects\Instagram Scrapper/config/randompy2020.checkpoint
+2020-12-30 11:15:39,172 - instabot version: 0.117.0 (api) - DEBUG - GET to endpoint: users/calcutta_bloggers/usernameinfo/ returned response: <Response [200]>
+2020-12-30 11:15:40,563 - instabot version: 0.117.0 (api) - DEBUG - GET to endpoint: users/15041839142/info/ returned response: <Response [200]>
+2020-12-30 11:15:41,258 - instabot version: 0.117.0 (api) - DEBUG - GET to endpoint: friendships/15041839142/followers/?rank_token=45169428424_22aee7b9-9b18-47c6-8ed3-a5513d63899c returned response: <Response [200]>
+2020-12-30 11:15:41,861 - instabot version: 0.117.0 (api) - DEBUG - GET to endpoint: friendships/15041839142/followers/?rank_token=45169428424_22aee7b9-9b18-47c6-8ed3-a5513d63899c&max_id=QVFCc3RxREd2b1RneHA5MkVlUDJDYXpRc2hMTVBXZjFBYkFBLThUbmQyUWtoWVlxWmtkVXhPdlVXa0x0MlNDaGxpSW5nMUhGVFRlMFp4LWxaNGVqaUdUSQ== returned response: <Response [200]>
+2020-12-30 11:15:42,491 - instabot version: 0.117.0 (api) - DEBUG - GET to endpoint: friendships/15041839142/followers/?rank_token=45169428424_22aee7b9-9b18-47c6-8ed3-a5513d63899c&max_id=QVFCNWxJRURiSFBneEJNdkthc2I2aG9fcG1Jdm9ySzdQSzZsYVhsUktmLUg0VWVUaWtuQ0ViOWVXYzM3S2RhVFYwRDNMM0JScVJ0MmQ0a0hiQzZ6V1ZzVw== returned response: <Response [200]>
+2020-12-30 11:15:43,192 - instabot version: 0.117.0 (api) - DEBUG - GET to endpoint: friendships/15041839142/followers/?rank_token=45169428424_22aee7b9-9b18-47c6-8ed3-a5513d63899c&max_id=QVFDeEd1S3QzZlFxaHlJRTNvaGNOMTFWcmlUVW1BbERIazNaeXZXTU13Sm1HbnFRS2FNRm5YMEozYVBsYy1MajBRMzZSVlMtWGJYeG1NU0JidnJIalFodw== returned response: <Response [200]>
+2020-12-30 11:15:43,810 - instabot version: 0.117.0 (api) - DEBUG - GET to endpoint: friendships/15041839142/followers/?rank_token=45169428424_22aee7b9-9b18-47c6-8ed3-a5513d63899c&max_id=QVFEc1Y0T0RHRE5Gb3JFaFhDdl9JTFFLcTg3LXpnalljMU51QWJ1SlRISHA2b3lZSlpremxZUkdmcjFJTWJyMWhMelB4YUFhc3BndDRNZF9seFhnRFV2SQ== returned response: <Response [200]>
+2020-12-30 11:15:44,411 - instabot version: 0.117.0 (api) - DEBUG - GET to endpoint: friendships/15041839142/followers/?rank_token=45169428424_22aee7b9-9b18-47c6-8ed3-a5513d63899c&max_id=QVFDeWNFYnZHTmFjV19Ob2RHT2thbU9kak1ocjdYSWtIblo5U2NYYTNMNm1yYXB3cktHaHhZR0p5WDdjYnpjRUpxN3BQZ19uQ044RGNzRVVxckU5SHNUYg== returned response: <Response [200]>
+2020-12-30 11:15:44,994 - instabot version: 0.117.0 (api) - DEBUG - GET to endpoint: friendships/15041839142/followers/?rank_token=45169428424_22aee7b9-9b18-47c6-8ed3-a5513d63899c&max_id=QVFBNmduWGhabGQweXJiYnlBVzB6V3RDSVpBNldVRDZMYmtNRlpuWTNDbnZwRFNDNm1mMHhoSThXSDFVT0NSM1VSazkyZWh2VlJVVGpMemZTNzJfbGllTw== returned response: <Response [200]>
+2020-12-30 11:15:45,576 - instabot version: 0.117.0 (api) - DEBUG - GET to endpoint: friendships/15041839142/followers/?rank_token=45169428424_22aee7b9-9b18-47c6-8ed3-a5513d63899c&max_id=QVFEUDhWaU16MUpNakpvRElSbDR3Vm9XVkh3YVAyWTZlOXNXT2F1TUpxU3pEcGNTRFNfeEdQdFZ3Y3cwTEIzaFZLRzVnWkZmbUZnbkhkUGphTUJhVVRrNA== returned response: <Response [200]>
+2020-12-30 11:15:46,299 - instabot version: 0.117.0 (api) - DEBUG - GET to endpoint: friendships/15041839142/followers/?rank_token=45169428424_22aee7b9-9b18-47c6-8ed3-a5513d63899c&max_id=QVFBNFFRem5DcmkxR0VRMEFRSXJjOEtPd25ZdWhtUlFCYVN2U0hoNHBjOXY5d25mbi1ja0JlYWpBRlZOdnFRS3ZiYnU1cUhKQkpGSXlRWjc1dDU2cTZHVg== returned response: <Response [200]>
+2020-12-30 11:15:46,989 - instabot version: 0.117.0 (api) - DEBUG - GET to endpoint: friendships/15041839142/followers/?rank_token=45169428424_22aee7b9-9b18-47c6-8ed3-a5513d63899c&max_id=QVFDajExQjVxZGpOd3J5djMtalBPOWs0b2lnRVdOZGtXS3NNakxwcnhMMGVaa21uWGhJUC11YkhtcFVfSEg2WmQ0M0NKT0htb1ZKV3NfT2hKMERjSThEVg== returned response: <Response [200]>
+2020-12-30 11:15:47,531 - instabot version: 0.117.0 (api) - DEBUG - GET to endpoint: friendships/15041839142/followers/?rank_token=45169428424_22aee7b9-9b18-47c6-8ed3-a5513d63899c&max_id=QVFEb3RhWlIxNkl0bmUtVXp6WEtwS0tWcG4yS3BZRmkzWDIwRGpaMU5fZXBsam1ZaWdnUGJ4WDNkcFpEV21kSWRDS2x1RU91NloyR2NTRGVxVkVPM2hwVQ== returned response: <Response [429]>
+2020-12-30 11:15:47,531 - instabot version: 0.117.0 (api) - DEBUG - Responsecode indicates error; response content: b'{"message": "Please wait a few minutes before you try again.", "status": "fail"}'
+2020-12-30 11:15:47,531 - instabot version: 0.117.0 (api) - ERROR - Request returns 429 error!
+2020-12-30 11:15:47,531 - instabot version: 0.117.0 (api) - WARNING - That means 'too many requests'. I'll go to sleep for 5 minutes.
+2020-12-30 11:20:48,102 - instabot version: 0.117.0 (api) - DEBUG - GET to endpoint: friendships/15041839142/followers/?rank_token=45169428424_22aee7b9-9b18-47c6-8ed3-a5513d63899c&max_id=QVFEb3RhWlIxNkl0bmUtVXp6WEtwS0tWcG4yS3BZRmkzWDIwRGpaMU5fZXBsam1ZaWdnUGJ4WDNkcFpEV21kSWRDS2x1RU91NloyR2NTRGVxVkVPM2hwVQ== returned response: <Response [429]>
+2020-12-30 11:20:48,102 - instabot version: 0.117.0 (api) - DEBUG - Responsecode indicates error; response content: b'{"message": "Please wait a few minutes before you try again.", "status": "fail"}'
+2020-12-30 11:20:48,102 - instabot version: 0.117.0 (api) - ERROR - Request returns 429 error!
+2020-12-30 11:20:48,102 - instabot version: 0.117.0 (api) - WARNING - That means 'too many requests'. I'll go to sleep for 10 minutes.

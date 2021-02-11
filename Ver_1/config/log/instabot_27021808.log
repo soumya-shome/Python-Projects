@@ -1,0 +1,43 @@
+2020-12-29 17:03:01,821 - instabot version: 0.117.0 (bot) - INFO - Instabot version: 0.117.0 Started
+2020-12-29 17:03:01,823 - instabot version: 0.117.0 (bot) - DEBUG - Bot imported from C:\Users\LENOVO\AppData\Local\Programs\Python\Python38-32\lib\site-packages\instabot\bot\bot.py
+2020-12-29 17:03:01,823 - instabot version: 0.117.0 (api_login) - INFO - Not yet logged in starting: PRE-LOGIN FLOW!
+2020-12-29 17:03:02,299 - instabot version: 0.117.0 (api) - DEBUG - POST to endpoint: accounts/get_prefill_candidates/ returned response: <Response [200]>
+2020-12-29 17:03:02,717 - instabot version: 0.117.0 (api) - DEBUG - POST to endpoint: qe/sync/ returned response: <Response [200]>
+2020-12-29 17:03:03,525 - instabot version: 0.117.0 (api) - DEBUG - POST to endpoint: launcher/sync/ returned response: <Response [200]>
+2020-12-29 17:03:03,943 - instabot version: 0.117.0 (api) - DEBUG - POST to endpoint: accounts/contact_point_prefill/ returned response: <Response [200]>
+2020-12-29 17:03:05,861 - instabot version: 0.117.0 (api) - DEBUG - POST to endpoint: accounts/login/ returned response: <Response [200]>
+2020-12-29 17:03:05,861 - instabot version: 0.117.0 (api) - INFO - Logged-in successfully as 'randompy2020'!
+2020-12-29 17:03:05,861 - instabot version: 0.117.0 (api_login) - INFO - LOGIN FLOW! Just logged-in: True
+2020-12-29 17:03:06,397 - instabot version: 0.117.0 (api) - DEBUG - POST to endpoint: qe/sync/ returned response: <Response [200]>
+2020-12-29 17:03:06,804 - instabot version: 0.117.0 (api) - DEBUG - POST to endpoint: launcher/sync/ returned response: <Response [200]>
+2020-12-29 17:03:07,211 - instabot version: 0.117.0 (api) - DEBUG - GET to endpoint: zr/token/result/?device_id=android-e00652d37fc01327&token_hash=&custom_device_id=android-e00652d37fc01327&fetch_reason=token_expired returned response: <Response [200]>
+2020-12-29 17:03:07,866 - instabot version: 0.117.0 (api) - DEBUG - GET to endpoint: multiple_accounts/get_account_family/ returned response: <Response [200]>
+2020-12-29 17:03:08,289 - instabot version: 0.117.0 (api) - DEBUG - POST to endpoint: qe/sync/ returned response: <Response [200]>
+2020-12-29 17:03:09,061 - instabot version: 0.117.0 (api) - DEBUG - GET to endpoint: igtv/browse_feed/?prefetch=1 returned response: <Response [200]>
+2020-12-29 17:03:09,467 - instabot version: 0.117.0 (api) - DEBUG - POST to endpoint: creatives/ar_class/ returned response: <Response [200]>
+2020-12-29 17:03:10,080 - instabot version: 0.117.0 (api) - DEBUG - POST to endpoint: feed/reels_tray/ returned response: <Response [200]>
+2020-12-29 17:03:11,279 - instabot version: 0.117.0 (api) - DEBUG - POST to endpoint: feed/timeline/ returned response: <Response [200]>
+2020-12-29 17:03:11,707 - instabot version: 0.117.0 (api) - DEBUG - GET to endpoint: media/blocked/ returned response: <Response [200]>
+2020-12-29 17:03:12,269 - instabot version: 0.117.0 (api) - DEBUG - GET to endpoint: news/inbox/ returned response: <Response [200]>
+2020-12-29 17:03:12,697 - instabot version: 0.117.0 (api) - DEBUG - GET to endpoint: loom/fetch_config/ returned response: <Response [200]>
+2020-12-29 17:03:14,062 - instabot version: 0.117.0 (api) - DEBUG - GET to endpoint: scores/bootstrap/users/?surfaces=["autocomplete_user_list","coefficient_besties_list_ranking","coefficient_rank_recipient_user_suggestion","coefficient_ios_section_test_bootstrap_ranking","coefficient_direct_recipients_ranking_variant_2"] returned response: <Response [200]>
+2020-12-29 17:03:14,469 - instabot version: 0.117.0 (api) - DEBUG - GET to endpoint: business/eligibility/get_monetization_products_eligibility_data/?product_types=branded_content returned response: <Response [200]>
+2020-12-29 17:03:14,890 - instabot version: 0.117.0 (api) - DEBUG - GET to endpoint: business/branded_content/should_require_professional_account/ returned response: <Response [200]>
+2020-12-29 17:03:15,300 - instabot version: 0.117.0 (api) - DEBUG - GET to endpoint: linked_accounts/get_linkage_status/ returned response: <Response [200]>
+2020-12-29 17:03:15,709 - instabot version: 0.117.0 (api) - DEBUG - GET to endpoint: locations/request_country/ returned response: <Response [200]>
+2020-12-29 17:03:16,179 - instabot version: 0.117.0 (api) - DEBUG - GET to endpoint: qp/get_cooldowns/?signed_body=signed_body=4b9c516a5410a3bc128e09c6104a7f042146b9c2023870560c63a43a7f66781c.4&ig_sig_key_version=4&ig_sig_key_version=4 returned response: <Response [200]>
+2020-12-29 17:03:16,576 - instabot version: 0.117.0 (api) - DEBUG - GET to endpoint: users/arlink_download_info/?version_override=2.2.1 returned response: <Response [200]>
+2020-12-29 17:03:17,180 - instabot version: 0.117.0 (api) - DEBUG - GET to endpoint: users/45169428424/info/ returned response: <Response [200]>
+2020-12-29 17:03:17,634 - instabot version: 0.117.0 (api) - DEBUG - GET to endpoint: direct_v2/get_presence/ returned response: <Response [200]>
+2020-12-29 17:03:18,119 - instabot version: 0.117.0 (api) - DEBUG - GET to endpoint: direct_v2/inbox/?visual_message_return_type=unseen&thread_message_limit=10&persistentBadging=true&limit=20 returned response: <Response [200]>
+2020-12-29 17:03:18,584 - instabot version: 0.117.0 (api) - DEBUG - GET to endpoint: direct_v2/inbox/?visual_message_return_type=unseen&persistentBadging=true&limit=0 returned response: <Response [200]>
+2020-12-29 17:03:19,916 - instabot version: 0.117.0 (api) - DEBUG - GET to endpoint: discover/topical_explore/?is_prefetch=true&omit_cover_media=true&use_sectional_payload=true&timezone_offset=0&session_id=9add4303-138c-48d7-86a0-141f46787bc5&include_fixed_destinations=true returned response: <Response [200]>
+2020-12-29 17:03:20,759 - instabot version: 0.117.0 (api) - DEBUG - POST to endpoint: notifications/badge/ returned response: <Response [200]>
+2020-12-29 17:03:21,391 - instabot version: 0.117.0 (api) - DEBUG - POST to endpoint: qp/batch_fetch/ returned response: <Response [200]>
+2020-12-29 17:03:21,393 - instabot version: 0.117.0 (bot_checkpoint) - DEBUG - Loading Checkpoint file from: D:\Programming Languages\03. Projects\Instagram Scrapper/config/randompy2020.checkpoint
+2020-12-29 17:03:25,067 - instabot version: 0.117.0 (api) - DEBUG - GET to endpoint: users/calcutta_bloggers/usernameinfo/ returned response: <Response [200]>
+2020-12-29 17:03:25,916 - instabot version: 0.117.0 (api) - DEBUG - GET to endpoint: users/15041839142/info/ returned response: <Response [200]>
+2020-12-29 17:03:26,342 - instabot version: 0.117.0 (api) - DEBUG - GET to endpoint: friendships/15041839142/followers/?rank_token=45169428424_22aee7b9-9b18-47c6-8ed3-a5513d63899c returned response: <Response [429]>
+2020-12-29 17:03:26,342 - instabot version: 0.117.0 (api) - DEBUG - Responsecode indicates error; response content: b'{"message": "Please wait a few minutes before you try again.", "status": "fail"}'
+2020-12-29 17:03:26,342 - instabot version: 0.117.0 (api) - ERROR - Request returns 429 error!
+2020-12-29 17:03:26,343 - instabot version: 0.117.0 (api) - WARNING - That means 'too many requests'. I'll go to sleep for 5 minutes.

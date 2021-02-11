@@ -1,0 +1,1 @@
+{'insta_username': 'randompy2020', 'insta_password': 'lucifer99', 'username': 'calcutta_bloggers', 'discord_webhook_url': 'https://discordapp.com/api/webhooks/747375659390730350/4ZiGUNsFP8YrxPX-gwNlv0LzZtiUYawXTDhgTINZMJH_Nv-Mpt6WF0_dsXhR2Q6yfqGS'}
