@@ -1,0 +1,1 @@
+{'insta_username': 'random.py70', 'insta_password': 'xyz123', 'username': 'df', 'discord_webhook_url': 'df'}
