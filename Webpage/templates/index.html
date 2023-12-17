@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Python Projects</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Python Projects</h1>
+  <ul>
+    {% for project in projects %}
+      <li><a href="/projects/{{ project }}">{{ project }}</a></li>
+    {% endfor %}
+  </ul>
+</body>
+</html>
