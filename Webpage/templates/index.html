@@ -3,13 +3,41 @@
 <head>
   <title>Python Projects</title>
   <link rel="stylesheet" href="style.css">
+  <style>
+    /* Apply basic styles to the menu bar */
+    ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        background-color: #333; /* Set the background color */
+    }
+
+    /* Style the individual menu items */
+    li {
+        float: left;
+    }
+
+    /* Style the links within the menu items */
+    li a {
+        display: block;
+        color: white;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+    }
+
+    /* Change the link color on hover */
+    li a:hover {
+        background-color: #555;
+    }
+</style>
 </head>
 <body>
   <h1>Python Projects</h1>
   <ul>
-    {% for project in projects %}
-      <li><a href="/projects/{{ project }}">{{ project }}</a></li>
-    {% endfor %}
+    <li><a href="generate_qr">QR Maker</a></li>
+    <li><a href="ascii_magic">ASCII Magic</a></li>
   </ul>
 </body>
 </html>
