@@ -1,4 +1,0 @@
-from ascii_magic import AsciiArt
-
-art = AsciiArt.from_image("instagram.png")
-art.to_terminal(columns=50)
