@@ -11,13 +11,13 @@ header("Refresh:0,URL=stuHome.php");
 <!doctype html>
 <html>
 <head>
-<meta charset="utf-8">
-<title>Home</title>
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-{% load static %}
+	<meta charset="utf-8">
+	<title>Home</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	{% load static %}
 </head>
 	
 <script>
@@ -40,51 +40,51 @@ header("Refresh:0,URL=stuHome.php");
 
 <body>
 	<nav class="navbar navbar-inverse">
-	<div class="container-fluid">
-		<div class="navbar-header">
-			<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myAHome">
-				<span class="icon-bar"></span>
-				<span class="icon-bar"></span>
-				<span class="icon-bar"></span>
-			</button>
-			<a class="navbar-brand" href="#">Centre</a>
+		<div class="container-fluid">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myAHome">
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand" href="#">Centre</a>
+			</div>
+			<div class="collapse navbar-collapse" id="myAHome"> 
+				<ul class="nav navbar-nav">
+					<li class="active"><a href="index.php">Home</a></li>
+					<li><a href="#">Attendance Log</a></li>
+					<li><a href="Register.php">Register</a></li>
+					<li><a href="Information.php">Information</a></li>
+					<li><a href="#">Settings</a></li>
+					<li><a href="#">Check Attendance</a></li>
+				</ul>				
+				</ul>
+				<ul class="nav navbar-nav navbar-right">
+					
+					<li>
+					<form class="form-inline" style="padding-top: 8px">
+					<div class="form-group">
+						<input type="search" name="search" id="Search" placeholder="Search" class="form-control col-">
+						<button type="submit" class="btn btn-default"><span class="glyphicon glyphicon-search"></span></button>
+					</div>
+					</form>
+					</li>
+					<li><a href="#" data-target="#mymodal2" data-toggle="modal"><span class="glyphicon glyphicon-user" ></span>&nbsp;Sign Up</a></li>
+					<li><a href="#" data-target="#mymodal" data-toggle="modal"><span class="glyphicon glyphicon-log-in" ></span>&nbsp;Log In</a></li>
+				</ul>
+			</div>
 		</div>
-		<div class="collapse navbar-collapse" id="myAHome"> 
-			<ul class="nav navbar-nav">
-				<li class="active"><a href="index.php">Home</a></li>
-				<li><a href="#">Attendance Log</a></li>
-				<li><a href="Register.php">Register</a></li>
-				<li><a href="Information.php">Information</a></li>
-				<li><a href="#">Settings</a></li>
-				<li><a href="#">Check Attendance</a></li>
-			</ul>				
-			</ul>
-			<ul class="nav navbar-nav navbar-right">
-				
-				<li>
-				<form class="form-inline" style="padding-top: 8px">
-				<div class="form-group">
-					<input type="search" name="search" id="Search" placeholder="Search" class="form-control col-">
-					<button type="submit" class="btn btn-default"><span class="glyphicon glyphicon-search"></span></button>
-				</div>
-				</form>
-				</li>
-				<li><a href="#" data-target="#mymodal2" data-toggle="modal"><span class="glyphicon glyphicon-user" ></span>&nbsp;Sign Up</a></li>
-				<li><a href="#" data-target="#mymodal" data-toggle="modal"><span class="glyphicon glyphicon-log-in" ></span>&nbsp;Log In</a></li>
-			</ul>
-		</div>
-	</div>
-</nav>
+	</nav>
 
-<div class="row container-fluid" >
+	<div class="row container-fluid" >
 		<div class="col-md-8">
 			<h1 class="page-header">Company Name</h1>
-				<h1 class=" text-danger">Bootstrap</h1>
-					<p class="text-justify text-capitalize">Build responsive, mobile-first projects on the web with the world’s most popular front-end component library. 
-					Bootstrap is an open source toolkit for developing with HTML, CSS, and JS. Quickly prototype your ideas or build your entire app with our Sass variables and mixins, responsive grid system, extensive prebuilt components, and powerful plugins built on jQuery.
-					Build responsive, mobile-first projects on the web with the world’s most popular front-end component library. 
-					Bootstrap is an open source toolkit for developing with HTML, CSS, and JS. Quickly prototype your ideas or build your entire app with our Sass variables and mixins, responsive grid system, extensive prebuilt components, and powerful plugins built on jQuery. 
-					</p>
+			<h1 class=" text-danger">Bootstrap</h1>
+			<p class="text-justify text-capitalize">Build responsive, mobile-first projects on the web with the world’s most popular front-end component library. 
+			Bootstrap is an open source toolkit for developing with HTML, CSS, and JS. Quickly prototype your ideas or build your entire app with our Sass variables and mixins, responsive grid system, extensive prebuilt components, and powerful plugins built on jQuery.
+			Build responsive, mobile-first projects on the web with the world’s most popular front-end component library. 
+			Bootstrap is an open source toolkit for developing with HTML, CSS, and JS. Quickly prototype your ideas or build your entire app with our Sass variables and mixins, responsive grid system, extensive prebuilt components, and powerful plugins built on jQuery. 
+			</p>
 		</div>
 		<div class="col-md-4">
 			<div class="panel-group">
@@ -94,124 +94,124 @@ header("Refresh:0,URL=stuHome.php");
 					</div>
 					<div class="panel-body">
 						<div id="myslide" class="carousel slide" data-ride="carousel">
-						<ul class="carousel-indicators">
-						<li class="active" data-target="#myslide" data-slide-to="0"></li>
-							<li  data-target="#myslide" data-slide-to="1"></li>
-							<li  data-target="#myslide" data-slide-to="2"></li>
+							<ul class="carousel-indicators">
+								<li class="active" data-target="#myslide" data-slide-to="0"></li>
+								<li  data-target="#myslide" data-slide-to="1"></li>
+								<li  data-target="#myslide" data-slide-to="2"></li>
 								<li  data-target="#myslide" data-slide-to="3"></li>
-				</ul>
-		<div class="carousel-inner" >
-			<div class="item active">
-			<img src="{% static 'images/img1.jpg' %}" class="img-responsive">
-		</div>
-		<div class="item ">
-			<img src="{% static 'images/img2.jpg' %}" class="img-responsive">
-		</div>
-		<div class="item ">
-			<img src="{% static 'images/img3.jpg' %}" class="img-responsive">
-		</div>
-		<div class="item ">
-			<img src="{% static 'images/img4.jpg' %}" class="img-responsive">
-		</div>
-	</div>
-		 <!-- Left and right controls -->   
-		<a class="left carousel-control" href="#myslide" data-slide="prev">     
-			<span class="glyphicon glyphicon-chevron-left"></span>     
-			  </a>   
-		<a class="right carousel-control" href="#myslide" data-slide="next">     
-			<span class="glyphicon glyphicon-chevron-right"></span> 
-		</a>
-	</div>
+							</ul>
+							<div class="carousel-inner" >
+								<div class="item active">
+									<img src="{% static 'images/img1.jpg' %}" class="img-responsive">
+								</div>
+								<div class="item ">
+									<img src="{% static 'images/img2.jpg' %}" class="img-responsive">
+								</div>
+								<div class="item ">
+									<img src="{% static 'images/img3.jpg' %}" class="img-responsive">
+								</div>
+								<div class="item ">
+									<img src="{% static 'images/img4.jpg' %}" class="img-responsive">
+								</div>
+							</div>
+			<!-- Left and right controls -->   
+							<a class="left carousel-control" href="#myslide" data-slide="prev">     
+								<span class="glyphicon glyphicon-chevron-left"></span>     
+								</a>   
+							<a class="right carousel-control" href="#myslide" data-slide="next">     
+								<span class="glyphicon glyphicon-chevron-right"></span> 
+							</a>
+						</div>
 					</div>
 					<div class="panel-footer">		
 						<h3>More...</h3>
 					</div>
-					</div>
+				</div>
 			</div>
 		</div>
-		</div>
+	</div>
 
-<div id="mymodal" class="modal fade" role="dialog">
-	<div class="modal-dialog">
-		<div class="modal-content">
-			<div class="modal-header">
-				<button type="button" class="close" data-dismiss="modal">&times;</button>
-				<h2 class="modal-title">Log In</h2>
-			</div>
-			<div class="modal-body">
-				<p><h4><b>Welcome&nbsp;!</b></h4></p>
-			
-				<form class="form-horizontal" action="Login.php" method="post" name="login">   
-					<div class="form-group">     
-						<label class="control-label col-sm-3" for="id">Student ID:</label>     
-						<div class="col-sm-9">       
-							<input type="text" class="form-control" id="id" name="t1" placeholder="Enter Username">     
-						</div>   
-					</div>   
-					<div class="form-group">     
-						<label class="control-label col-sm-3" for="pwd">Password:</label>     
-						<div class="col-sm-9">        
-							<input type="password" class="form-control" id="pwd" name="p1" placeholder="Enter Password"><input type="checkbox" onChange="showpass(1)" >Show Password   
-						</div>   
-					</div>     
-					<div class="form-group">      
-						<div class="col-sm-offset-2 col-sm-10">      
-							<input type="submit" class="btn btn-default" name="b1" value="Log-in">  
-						</div>   
-					</div> 
-				</form>
-			</div>
-			<div class="modal-footer">
-				<button class="btn btn-info " type="button" data-dismiss="modal">Close</button>
+	<div id="mymodal" class="modal fade" role="dialog">
+		<div class="modal-dialog modal-dialog-centered">
+			<div class="modal-content">
+				<div class="modal-header border-0">
+					<h2 class="modal-title text-center w-100" style="font-weight: 600;">Log In</h2>
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close" style="position: absolute; right: 20px; top: 15px; font-size: 24px; color: #aaa;">
+						<span aria-hidden="true">&times;</span>
+					</button>
+				</div>
+				<div class="modal-body">
+					<div class="text-center mb-4">
+						<h4 style="font-weight: 500;">Welcome!</h4>
+					</div>
+					<form action="Login.php" method="post" name="login">
+						<div class="form-group">
+							<label for="id" class="sr-only">Student ID</label>
+							<input type="text" class="form-control" id="id" name="t1" placeholder="Student ID" required>
+						</div>
+						<div class="form-group">
+							<label for="pwd" class="sr-only">Password</label>
+							<input type="password" class="form-control" id="pwd" name="p1" placeholder="Password" required>
+							<small class="form-text text-muted">
+								<input type="checkbox" onChange="showpass(1)"> Show Password
+							</small>
+						</div>
+						<button type="submit" class="btn btn-primary btn-block" name="b1" style="font-weight: 500;">Log In</button>
+					</form>
+				</div>
+				<div class="modal-footer justify-content-center border-0">
+					<button class="btn btn-outline-secondary" type="button" data-dismiss="modal">Close</button>
+				</div>
 			</div>
 		</div>
 	</div>
-</div>
 	
-<div id="mymodal2" class="modal fade" role="dialog">
-	<div class="modal-dialog">
-		<div class="modal-content">
-			<div class="modal-header">
-				<button type="button" class="close" data-dismiss="modal">&times;</button>
-				<h2 class="modal-title">Sign Up</h2>
-			</div>
-			<div class="modal-body">
-				<p><h4><b>Enter your details here&nbsp;:</b></h4></p><br>
-				<form name="f1" class="form-horizontal" method="post" action="SignUp.php">
-					<div class="form-group">     
-						<label class="control-label col-sm-3" for="sId">Student ID</label>     
-						<div class="col-sm-9">       
-							<input type="text" class="form-control" id="sId" placeholder="Enter Student ID" name="t1" required>     
-						</div>   
+
+	<div id="mymodal2" class="modal fade" role="dialog">
+		<div class="modal-dialog modal-dialog-centered">
+			<div class="modal-content">
+				<div class="modal-header border-0">
+					<h2 class="modal-title text-center w-100" style="font-weight: 600;">Sign Up</h2>
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close" style="position: absolute; right: 20px; top: 15px; font-size: 24px; color: #aaa;">
+						<span aria-hidden="true">&times;</span>
+					</button>
+				</div>
+				<div class="modal-body">
+					<div class="text-center mb-4">
+						<h4 style="font-weight: 500;">Enter your details below</h4>
 					</div>
-					<div class="form-group">     
-						<label class="control-label col-sm-3" for="pwd">Password</label>     
-						<div class="col-sm-9">       
-							<input type="password" class="form-control" id="pwd" name="t2" placeholder="Enter Password" required>
-							<input type="checkbox" onChange="showpass(2)" >Show
-						</div>   
-					</div>
-					<div class="form-group">     
-						<label class="control-label col-sm-3" for="pwd2">Confirm Password</label>     
-						<div class="col-sm-9">       
-							<input type="password" class="form-control" id="pwd2" name="t3" placeholder="Enter Password" required>
-							<input type="checkbox" onChange="showpass(3)" >Show 
-						</div>   
-					</div>
-					<div class="form-group">      
-						<div class="col-sm-offset-2 col-sm-10">      
-							<input type="reset" class="btn btn-default"></button>
-							&nbsp;
-							<input type="submit" class="btn btn-default" name="b1" value="Sign-up">
-						</div>   
-					</div> 
-				</form>
-			</div>
-			<div class="modal-footer">
-				<button class="btn btn-info " type="button" data-dismiss="modal">Close</button>
+					<form name="f1" method="post" action="SignUp.php">
+						<div class="form-group">
+							<label for="sId">Student ID</label>
+							<input type="text" class="form-control" id="sId" placeholder="Student ID" name="t1" required>
+						</div>
+						<div class="form-group">
+							<label for="pwd">Password</label>
+							<input type="password" class="form-control" id="pwd" name="t2" placeholder="Password" required>
+							<small class="form-text text-muted">
+								<input type="checkbox" onChange="showpass(2)"> Show Password
+							</small>
+						</div>
+						<div class="form-group">
+							<label for="pwd2">Confirm Password</label>
+							<input type="password" class="form-control" id="pwd2" name="t3" placeholder="Confirm Password" required>
+							<small class="form-text text-muted">
+								<input type="checkbox" onChange="showpass(3)"> Show Password
+							</small>
+						</div>
+						<div class="form-group">
+							<button type="reset" class="btn btn-secondary btn-block">Reset</button>
+							<button type="submit" class="btn btn-primary btn-block" name="b1" style="font-weight: 500;">Sign Up</button>
+						</div>
+					</form>
+				</div>
+				<div class="modal-footer justify-content-center border-0">
+					<button class="btn btn-outline-secondary" type="button" data-dismiss="modal">Close</button>
+				</div>
 			</div>
 		</div>
 	</div>
-</div>
+	
+	
 </body>
 </html>
