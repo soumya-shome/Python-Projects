@@ -39,42 +39,7 @@ header("Refresh:0,URL=stuHome.php");
 </script>
 
 <body>
-	<nav class="navbar navbar-inverse">
-		<div class="container-fluid">
-			<div class="navbar-header">
-				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myAHome">
-					<span class="icon-bar"></span>
-					<span class="icon-bar"></span>
-					<span class="icon-bar"></span>
-				</button>
-				<a class="navbar-brand" href="#">Centre</a>
-			</div>
-			<div class="collapse navbar-collapse" id="myAHome"> 
-				<ul class="nav navbar-nav">
-					<li class="active"><a href="index.php">Home</a></li>
-					<li><a href="#">Attendance Log</a></li>
-					<li><a href="Register.php">Register</a></li>
-					<li><a href="Information.php">Information</a></li>
-					<li><a href="#">Settings</a></li>
-					<li><a href="#">Check Attendance</a></li>
-				</ul>				
-				</ul>
-				<ul class="nav navbar-nav navbar-right">
-					
-					<li>
-					<form class="form-inline" style="padding-top: 8px">
-					<div class="form-group">
-						<input type="search" name="search" id="Search" placeholder="Search" class="form-control col-">
-						<button type="submit" class="btn btn-default"><span class="glyphicon glyphicon-search"></span></button>
-					</div>
-					</form>
-					</li>
-					<li><a href="#" data-target="#mymodal2" data-toggle="modal"><span class="glyphicon glyphicon-user" ></span>&nbsp;Sign Up</a></li>
-					<li><a href="#" data-target="#mymodal" data-toggle="modal"><span class="glyphicon glyphicon-log-in" ></span>&nbsp;Log In</a></li>
-				</ul>
-			</div>
-		</div>
-	</nav>
+	{% include 'navbar.html' %}
 
 	<div class="row container-fluid" >
 		<div class="col-md-8">
