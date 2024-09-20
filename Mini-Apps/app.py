@@ -3,6 +3,7 @@ import qrcode
 from PIL import Image
 from io import BytesIO
 import os
+from ascii_magic import AsciiArt, Back
 
 app = Flask(__name__)
 
@@ -48,7 +49,13 @@ def get_image(filename):
 
 @app.route('/ascii_magic')
 def ascii_art():
-    return render_template('ascii_art.html')
+    if request.method == 'POST':
+        text = request.form.get('text')
+        my_art = AsciiArt.from_image(f'images/{text}')
+        my_art.to_html_file('ascii_art.html', columns=200, width_ratio=2)
+        return render_template('ascii_art.html')
+    else:
+        return render_template('ascii_art.html')
 
 if __name__ == '__main__':
     app.run(debug=True)
