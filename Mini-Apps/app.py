@@ -35,7 +35,7 @@ def generate_qr():
         img = qr.make_image(fill_color=fill_color, back_color=back_color)
 
         # Save the QR code image to the 'images' folder
-        image_path = os.path.join(image_folder, f'{text}_{box_size}_{fill_color}_{back_color}.png')
+        image_path = os.path.join(image_folder, f'QR_Code.png')
         img.save(image_path)
 
         return render_template('generate_qr.html', qr_code=image_path, os=os)
