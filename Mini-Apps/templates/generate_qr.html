@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+
+{% block head %}
+
+{% endblock %}
+
+{% block body %}
+<h2 class="mb-4">QR Code Generator</h2>
+<p>Enter text to generate a QR code.</p>
+<form action="/generate_qr" method="post">
+    <label for="text">Enter text:</label>
+    <input type="text" id="text" name="text" required>
+    
+    <label for="fill_color">Fill color:</label>
+    <input type="color" id="fill_color" name="fill_color" value="#000000">
+
+    <label for="back_color">Background color:</label>
+    <input type="color" id="back_color" name="back_color" value="#ffffff">
+
+    <label for="box_size">Box size:</label>
+    <input type="number" id="box_size" name="box_size" min="1" value="10" required>
+
+    <button type="submit">Generate QR Code</button>
+</form>
+
+{% if qr_code %}
+    <h2>QR Code:</h2>
+    <img src="{{ url_for('get_image', filename=os.path.basename(qr_code)) }}" alt="QR Code">
+{% endif %}
+{% endblock %}
