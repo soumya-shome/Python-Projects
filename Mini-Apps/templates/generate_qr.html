@@ -44,16 +44,17 @@
     <div class="col-md-6">
         <h5>Generated QR Code:</h5>
         <div class="d-flex justify-content-center">
-            <img src="{{ url_for('get_image', filename=os.path.basename(qr_code)) }}" alt="QR Code" class="img-fluid mb-3">
+            <img src="data:image/png;base64,{{ qr_code }}" alt="QR Code" class="img-fluid mb-3">
         </div>
         <!-- Download Button -->
         <div class="text-center">
-            <a href="{{ url_for('get_image', filename=os.path.basename(qr_code)) }}" download="qr_code.png" class="btn btn-success btn-sm">
+            <a href="data:image/png;base64,{{ qr_code }}" download="qr_code.png" class="btn btn-success btn-sm">
                 Download QR Code
             </a>
         </div>
     </div>
     {% endif %}
+
 </div>
 
 {% endblock %}

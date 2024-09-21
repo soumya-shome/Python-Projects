@@ -4,6 +4,7 @@ from PIL import Image
 from io import BytesIO
 import os
 from ascii_magic import AsciiArt, Back
+import base64
 
 app = Flask(__name__,template_folder='templates')
 
@@ -36,17 +37,18 @@ def generate_qr():
 
         img = qr.make_image(fill_color=fill_color, back_color=back_color)
 
-        # Save the QR code image to the /tmp folder
-        image_path = os.path.join(image_folder, 'QR_Code.png')
-        img.save(image_path)
+        # Save the QR code image to an in-memory file
+        img_io = BytesIO()
+        img.save(img_io, 'PNG')
+        img_io.seek(0)
 
-        return render_template('generate_qr.html', qr_code=image_path, os=os)
-    else:
-        return render_template('generate_qr.html', qr_code=None, os=os)
+        # Convert the image to base64
+        img_base64 = base64.b64encode(img_io.getvalue()).decode('utf-8')
 
-@app.route('/tmp/images/<filename>')
-def get_image(filename):
-    return send_from_directory(image_folder, filename)
+        # Pass the base64-encoded image to the template
+        return render_template('generate_qr.html', qr_code=img_base64)
+
+    return render_template('generate_qr.html')
 
 @app.route('/ascii_magic')
 def ascii_art():
