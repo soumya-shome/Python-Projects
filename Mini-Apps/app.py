@@ -7,9 +7,10 @@ from ascii_magic import AsciiArt, Back
 
 app = Flask(__name__,template_folder='templates')
 
-# # Ensure the 'images' folder exists
-# image_folder = os.path.join(os.getcwd(), 'images')
-# os.makedirs(image_folder, exist_ok=True)
+# Ensure the 'images' folder exists
+image_folder = os.path.join(os.getcwd(), 'images')
+if not os.path.exists(image_folder):
+    os.makedirs(image_folder)
 
 @app.route('/')
 def home():
@@ -36,7 +37,7 @@ def generate_qr():
         img = qr.make_image(fill_color=fill_color, back_color=back_color)
 
         # Save the QR code image to the 'images' folder
-        image_path = os.path.join('iamges', f'QR_Code.png')
+        image_path = os.path.join('images', f'QR_Code.png')
         img.save(image_path)
 
         return render_template('generate_qr.html', qr_code=image_path, os=os)
@@ -45,7 +46,7 @@ def generate_qr():
 
 @app.route('/images/<filename>')
 def get_image(filename):
-    return send_from_directory('iamges', filename)
+    return send_from_directory('images', filename)
 
 @app.route('/ascii_magic')
 def ascii_art():
