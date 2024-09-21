@@ -44,7 +44,7 @@ def generate_qr():
     else:
         return render_template('generate_qr.html', qr_code=None, os=os)
 
-@app.route('/images/<filename>')
+@app.route('/tmp/images/<filename>')
 def get_image(filename):
     return send_from_directory(image_folder, filename)
 
