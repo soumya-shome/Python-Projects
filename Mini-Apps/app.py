@@ -7,10 +7,10 @@ from ascii_magic import AsciiArt, Back
 
 app = Flask(__name__,template_folder='templates')
 
-# Ensure the 'images' folder exists
-image_folder = os.path.join(os.getcwd(), 'images')
-if not os.path.exists(image_folder):
-    os.makedirs(image_folder)
+# # Ensure the 'images' folder exists
+# image_folder = os.path.join(os.getcwd(), 'images')
+# if not os.path.exists(image_folder):
+#     os.makedirs(image_folder)
 
 @app.route('/')
 def home():
