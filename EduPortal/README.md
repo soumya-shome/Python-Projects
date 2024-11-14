@@ -1,3 +1,5 @@
+https://eduportal-beta.vercel.app/
+
 virutualenv venv
 pip install django     
 
