@@ -5,6 +5,7 @@ from io import BytesIO
 import os
 from ascii_magic import AsciiArt, Back
 import base64
+from pytube import YouTube
 
 app = Flask(__name__,template_folder='templates')
 
@@ -49,6 +50,39 @@ def generate_qr():
         return render_template('generate_qr.html', qr_code=img_base64)
 
     return render_template('generate_qr.html')
+
+
+@app.route('/download_video', methods=['GET', 'POST'])
+def download_video():
+    if request.method == 'POST':
+        video_url = request.form.get('video_url')
+
+        try:
+            # Create YouTube object
+            yt = YouTube(video_url)
+            
+            # Get the highest resolution progressive stream (video + audio)
+            video_stream = yt.streams.get_highest_resolution()
+
+            # Download the video to an in-memory file
+            video_buffer = BytesIO()
+            video_stream.stream_to_buffer(video_buffer)
+            video_buffer.seek(0)
+
+            # Return the video file as a downloadable response
+            return send_file(
+                video_buffer,
+                as_attachment=True,
+                download_name=f"{yt.title}.mp4",
+                mimetype="video/mp4"
+            )
+
+        except Exception as e:
+            return f"An error occurred: {e}", 500
+
+    return render_template('download_video.html')
+
+
 
 @app.route('/ascii_magic')
 def ascii_art():
