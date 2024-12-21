@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Select Resolution</title>
+</head>
+<body>
+
+    <h1>Select Video Resolution</h1>
+
+    <form action="/download/start" method="POST">
+        <input type="hidden" name="url" value="{{ video_url }}">
+
+        <label for="resolution">Choose Resolution:</label><br>
+        <select name="resolution" id="resolution" required>
+            {% for stream in available_resolutions %}
+                <option value="{{ stream.resolution }}">
+                    Resolution: {{ stream.resolution }}, FPS: {{ stream.fps }}, File size: ~{{ stream.size }}
+                </option>
+            {% endfor %}
+        </select><br>
+        <button type="submit">Download</button>
+    </form>
+
+</body>
+</html>
