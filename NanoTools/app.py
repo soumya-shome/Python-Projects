@@ -5,7 +5,7 @@ from io import BytesIO
 import os
 from ascii_magic import AsciiArt, Back
 import base64
-from pytube import YouTube
+from pytubefix import YouTube
 
 app = Flask(__name__,template_folder='templates')
 

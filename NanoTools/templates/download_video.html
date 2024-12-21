@@ -1,9 +1,10 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Download YouTube Video</title>
-</head>
-<body>
+{% extends 'base.html' %}
+
+{% block head %}
+
+{% endblock %}
+
+{% block body %}
     <h1>Download YouTube Video</h1>
     <form method="POST">
         <label for="video_url">YouTube Video URL:</label>
@@ -11,5 +12,5 @@
         <br>
         <button type="submit">Download</button>
     </form>
-</body>
-</html>
+
+{% endblock %}
