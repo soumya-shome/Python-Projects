@@ -1,20 +1,14 @@
-from flask import Flask, render_template, request, send_from_directory
+from flask import Flask, render_template, request, jsonify, redirect, url_for, send_from_directory
 import qrcode
-from PIL import Image
+# from PIL import Image
 from io import BytesIO
 import os
 from ascii_magic import AsciiArt, Back
 import base64
 import subprocess
 from pytubefix import YouTube
-from flask import Flask, request, jsonify
-from flask import Flask, render_template, request, jsonify, redirect, url_for, send_from_directory
 import re
-# from pytube import YouTube
-import os
-import threading
-
-
+import ffmpeg
 
 app = Flask(__name__,template_folder='templates')
 
@@ -60,30 +54,22 @@ def generate_qr():
 
     return render_template('generate_qr.html')
 
-
-# Folder where the downloaded videos will be saved
 video_folder = '/tmp/videos'
 if not os.path.exists(video_folder):
     os.makedirs(video_folder)
 
-# Helper function to sanitize filenames
 def sanitize_filename(filename):
     return re.sub(r'[\\/*?:"<>|]', "_", filename)
 
-# Step 1: Show the form to input the YouTube URL
 @app.route('/download', methods=['GET', 'POST'])
 def download_video():
     if request.method == 'POST':
-        # Step 2: Process the YouTube URL and fetch available resolutions
         video_url = request.form.get('url')
-        
         if not video_url:
             return jsonify({"error": "Please provide a YouTube URL."}), 400
-
         try:
             yt = YouTube(video_url)
             streams = yt.streams.filter(adaptive=True, file_extension="mp4", only_video=True).order_by('resolution').desc()
-
             available_resolutions = []
             for i, stream in enumerate(streams, start=1):
                 size = f"{stream.filesize // (1024 * 1024)} MB" if stream.filesize else "unknown"
@@ -94,50 +80,33 @@ def download_video():
                     "size": size
                 }
                 available_resolutions.append(resolution_info)
-
-            # Show the form to select a resolution after fetching available resolutions
             return render_template('select_resolution.html', video_url=video_url, available_resolutions=available_resolutions)
 
         except Exception as e:
             return jsonify({"error": f"Error fetching video info: {str(e)}"}), 500
-
     return render_template('download_video.html')
 
-# Step 3: Handle the resolution selection and start the download
 @app.route('/download/start', methods=['POST'])
 def start_download():
     video_url = request.form.get('url')
     resolution = request.form.get('resolution')
-
     if not resolution:
         return jsonify({"error": "No resolution selected."}), 400
-
     try:
         yt = YouTube(video_url)
-        
-        # Remove the progressive filter and look for adaptive streams
         stream = yt.streams.filter(res=resolution, file_extension="mp4").first()
-
         if not stream:
             return jsonify({"error": f"Resolution {resolution} not available."}), 400
-
-        # Sanitize the filename to avoid issues with special characters
         output_file = sanitize_filename(f"{yt.title}-{resolution}.mp4")
-
-        # Run the download in a background thread
-        # threading.Thread(target=download_video_file, args=(stream, output_file, video_url)).start()
         if download_video_file(stream, output_file, video_url) == "Completed":
-            # Redirect the user to the file once it's ready
             return redirect(url_for('download_file', filename=output_file))
         else:
             raise KeyError
     except Exception as e:
         return jsonify({"error": f"Error downloading video: {str(e)}"}), 500
 
-# Background download function
 def download_video_file(stream, output_file, video_url):
     try:
-        # Download video and audio streams
         yt = YouTube(video_url)
         audio_stream = yt.streams.filter(only_audio=True, file_extension="mp4").first()
 
@@ -153,35 +122,26 @@ def download_video_file(stream, output_file, video_url):
         audio_file = audio_stream.download(output_path=video_folder, filename="audio.mp4")
         print("Audio downloaded!")
 
-        # Merge video and audio using FFmpeg
+        # Merge video and audio using ffmpeg-python
         output_path = os.path.join(video_folder, output_file)
         print("\nMerging video and audio...")
-        merge_command = [
-            "ffmpeg", "-y",
-            "-i", os.path.join(video_folder, "video.mp4"),
-            "-i", os.path.join(video_folder, "audio.mp4"),
-            "-c:v", "copy",
-            "-c:a", "aac",
-            output_path
-        ]
-        subprocess.run(merge_command, check=True)
-        print(f"Download and merge complete! File saved as '{output_file}'")
+        video_input = ffmpeg.input(os.path.join(video_folder, "video.mp4"))
+        audio_input = ffmpeg.input(os.path.join(video_folder, "audio.mp4"))
+        ffmpeg.output(video_input, audio_input, output_path, vcodec='copy', acodec='aac').run(overwrite_output=True)
 
-        # Clean up temporary files
+        print(f"Download and merge complete! File saved as '{output_file}'")
         os.remove(os.path.join(video_folder, "video.mp4"))
         os.remove(os.path.join(video_folder, "audio.mp4"))
         return "Completed"
     except Exception as e:
         print(f"Error downloading or merging video: {str(e)}")
 
-# Step 4: Serve the downloaded video file (automatically triggers download)
 @app.route('/downloads/<filename>')
 def download_file(filename):
     try:
         return send_from_directory(video_folder, filename, as_attachment=True)
     except FileNotFoundError:
         return jsonify({"error": "File not found"}), 404
-
 
 @app.route('/ascii_magic')
 def ascii_art():

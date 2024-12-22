@@ -1,27 +1,36 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Select Resolution</title>
-</head>
-<body>
+{% extends 'base.html' %}
 
-    <h1>Select Video Resolution</h1>
+{% block head %}
+{% endblock %}
 
-    <form action="/download/start" method="POST">
-        <input type="hidden" name="url" value="{{ video_url }}">
-
-        <label for="resolution">Choose Resolution:</label><br>
-        <select name="resolution" id="resolution" required>
-            {% for stream in available_resolutions %}
-                <option value="{{ stream.resolution }}">
-                    Resolution: {{ stream.resolution }}, FPS: {{ stream.fps }}, File size: ~{{ stream.size }}
-                </option>
-            {% endfor %}
-        </select><br>
-        <button type="submit">Download</button>
-    </form>
-
-</body>
-</html>
+{% block body %}
+<div class="row">
+    <!-- Resolution Selection Section -->
+    <div class="col-md-6 mb-3">
+        <div class="card shadow-sm">
+            <div class="card-header bg-primary text-white">
+                <h5 class="mb-0">Select Video Resolution</h5>
+            </div>
+            <div class="card-body">
+                <p>Choose your preferred resolution to download the video.</p>
+                <form action="/download/start" method="POST">
+                    <input type="hidden" name="url" value="{{ video_url }}">
+                    <div class="mb-3">
+                        <label for="resolution" class="form-label">Choose Resolution:</label>
+                        <select name="resolution" id="resolution" class="form-select form-select-sm" required>
+                            {% for stream in available_resolutions %}
+                            <option value="{{ stream.resolution }}">
+                                Resolution: {{ stream.resolution }}, FPS: {{ stream.fps }}, File size: ~{{ stream.size }}
+                            </option>
+                            {% endfor %}
+                        </select>
+                    </div>
+                    <div class="mt-3">
+                        <button type="submit" class="btn btn-primary btn-sm">Download</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
