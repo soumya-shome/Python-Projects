@@ -84,42 +84,79 @@ def start_download(request):
 
 
 # Utility to download and merge video and audio
+#---------------------
+# def download_video_file(stream, output_file, video_url):
+#     try:
+#         yt = YouTube(video_url)
+#         audio_stream = yt.streams.filter(only_audio=True, file_extension="mp4").first()
+
+#         if not audio_stream:
+#             print("No audio streams available for this video.")
+#             return
+
+#         print("\nDownloading video...")
+#         video_file = stream.download(output_path=video_folder, filename="video.mp4")
+#         print("Video downloaded!")
+
+#         print("\nDownloading audio...")
+#         audio_file = audio_stream.download(output_path=video_folder, filename="audio.mp4")
+#         print("Audio downloaded!")
+
+#         # Merge video and audio using ffmpeg-python
+#         output_path = os.path.join(video_folder, output_file)
+#         print("\nMerging video and audio...")
+#         video_input = ffmpeg.input(os.path.join(video_folder, "video.mp4"))
+#         audio_input = ffmpeg.input(os.path.join(video_folder, "audio.mp4"))
+#         ffmpeg.output(video_input, audio_input, output_path, vcodec='copy', acodec='aac').run(overwrite_output=True)
+
+#         print(f"Download and merge complete! File saved as '{output_file}'")
+#         os.remove(os.path.join(video_folder, "video.mp4"))
+#         os.remove(os.path.join(video_folder, "audio.mp4"))
+#         return "Completed"
+#     except Exception as e:
+#         print(f"Error downloading or merging video: {str(e)}")
+#---------------------
 def download_video_file(stream, output_file, video_url):
     try:
-        print(f"Starting download for video: {video_url}")
+        # print(f"Starting download for video: {video_url}")
         yt = YouTube(video_url)
         audio_stream = yt.streams.filter(only_audio=True, file_extension="mp4").first()
         if not audio_stream:
-            print("No audio streams available for this video.")
-            return None
+            # print("No audio streams available for this video.")
+            return
 
-        # Download video and audio
-        print("Downloading video stream.")
+        # print("\nDownloading video...")
         video_file = stream.download(output_path=video_folder, filename="video.mp4")
-        print("Downloading audio stream.")
+        # print("Video downloaded!")
+
+        # print("\nDownloading audio...")
         audio_file = audio_stream.download(output_path=video_folder, filename="audio.mp4")
+        # print("Audio downloaded!")
 
         # Merge video and audio using ffmpeg-python
-        print("Merging video and audio.")
         output_path = os.path.join(video_folder, output_file)
-        (
-            ffmpeg
-            .input(os.path.join(video_folder, "video.mp4"))
-            .input(os.path.join(video_folder, "audio.mp4"))
-            .output(output_path, vcodec='copy', acodec='aac')
-            .run(overwrite_output=True)
-        )
+        print("\nMergi/ng video and audio...")
+        video_input = ffmpeg.input(os.path.join(video_folder, "video.mp4"))
+        audio_input = ffmpeg.input(os.path.join(video_folder, "audio.mp4"))
+        ffmpeg.output(video_input, audio_input, output_path, vcodec='copy', acodec='aac').run(overwrite_output=True)
 
-        # Cleanup
-        print("Cleaning up temporary files.")
+        # print(f"Download and merge complete! File saved as '{output_file}'")
         os.remove(os.path.join(video_folder, "video.mp4"))
         os.remove(os.path.join(video_folder, "audio.mp4"))
         return "Completed"
     except Exception as e:
-        print(f"Error downloading or merging video: {str(e)}")
-        return None
+        # print(f"Error downloading or merging video: {str(e)}")
+        return
     
 # Serve downloaded files
+# -----------------
+# def download_file(filename):
+#     try:
+#         return send_from_directory(video_folder, filename, as_attachment=True)
+#     except FileNotFoundError:
+#         return jsonify({"error": "File not found"}), 404
+# -----------------
+
 def download_file(request, filename):
     file_path = os.path.join(video_folder, filename)
     print(f"Serving file: {file_path}")
