@@ -13,7 +13,8 @@
             </div>
             <div class="card-body">
                 <p>Enter a YouTube video URL to download the video.</p>
-                <form action="/download" method="POST">
+                <form action="{% url 'download_video' %}" method="POST">
+                    {% csrf_token %}
                     <div class="mb-3">
                         <label for="videoUrl" class="form-label">YouTube Video URL:</label>
                         <input type="text" id="videoUrl" name="url" class="form-control form-control-sm" required>

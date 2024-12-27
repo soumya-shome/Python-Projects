@@ -16,8 +16,11 @@ Including another URLconf
 """
 
 from django.contrib import admin
-from django.urls import path
+from django.urls import path,include
 
 urlpatterns = [
     path("admin/", admin.site.urls),
+    path('', include('homepage.urls')),
+    path('generate_qr', include('qr_generator.urls')),
+    path('yt_downloader', include('yt_downloader.urls')),  
 ]

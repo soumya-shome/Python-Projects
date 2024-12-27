@@ -1,12 +1,13 @@
 <!doctype html>
 <html lang="en">
-  <head>
+{% load static %}
+<head>
     <title>NanoTools</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900" rel="stylesheet">  
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="{{url_for('static',filename='css/style.css')}}">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
     {% block head%} {% endblock %}
   </head>
   <body>
@@ -21,7 +22,7 @@
               <a href="generate_qr"><span class="fa fa-qrcode"></span> QR Maker</a>
           </li>
           <li>
-            <a href="download"><span class="fa fa-youtube"></span> Youtube Download</a>
+            <a href="yt_downloader"><span class="fa fa-youtube"></span> Youtube Download</a>
           </li>
           <!--<li>
             <a href="ascii_magic"><span class="fa fa-sticky-note"></span> ASCII Magic</a>
@@ -80,9 +81,9 @@
       
     </div>
     
-    <script src="{{url_for('static',filename='js/jquery.min.js')}}"></script>
-    <script src="{{url_for('static',filename='js/popper.js')}}"></script>
-    <script src="{{url_for('static',filename='js/bootstrap.min.js')}}"></script>
-    <script src="{{url_for('static',filename='js/main.js')}}"></script>
+    <script src="{% static 'js/jquery.min.js' %}"></script>
+    <script src="{% static 'js/popper.js' %}"></script>
+    <script src="{% static 'js/bootstrap.min.js' %}"></script>
+    <script src="{% static 'js/main.js' %}"></script>
   </body>
 </html>

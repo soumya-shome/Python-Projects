@@ -1,12 +1,11 @@
 {% extends 'base.html' %}
 
 {% block head %}
-
+<!-- Add specific head content here if necessary -->
 {% endblock %}
 
 {% block body %}
 <div class="row">
-    <!-- Form Section -->
     <div class="col-md-4 mb-3">
         <div class="card shadow-sm">
             <div class="card-header bg-primary text-white">
@@ -14,7 +13,8 @@
             </div>
             <div class="card-body">
                 <p>Enter text to generate a QR code.</p>
-                <form action="/generate_qr" method="post">
+                <form action="{% url 'generate_qr' %}" method="post">
+                    {% csrf_token %}
                     <div class="mb-2">
                         <label for="text" class="form-label">Enter text:</label>
                         <input type="text" id="text" name="text" class="form-control form-control-sm" required>
@@ -39,14 +39,12 @@
         </div>
     </div>
 
-    <!-- QR Code Section -->
     {% if qr_code %}
     <div class="col-md-6">
         <h5>Generated QR Code:</h5>
         <div class="d-flex justify-content-center">
             <img src="data:image/png;base64,{{ qr_code }}" alt="QR Code" class="img-fluid mb-3">
         </div>
-        <!-- Download Button -->
         <div class="text-center">
             <a href="data:image/png;base64,{{ qr_code }}" download="qr_code.png" class="btn btn-success btn-sm">
                 Download QR Code
@@ -54,7 +52,5 @@
         </div>
     </div>
     {% endif %}
-
 </div>
-
 {% endblock %}

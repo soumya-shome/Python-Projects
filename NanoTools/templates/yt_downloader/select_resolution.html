@@ -13,7 +13,8 @@
             </div>
             <div class="card-body">
                 <p>Choose your preferred resolution to download the video.</p>
-                <form action="/download/start" method="POST">
+                <form action="{% url 'start_download' %}" method="POST">
+                    {% csrf_token %}
                     <input type="hidden" name="url" value="{{ video_url }}">
                     <div class="mb-3">
                         <label for="resolution" class="form-label">Choose Resolution:</label>
